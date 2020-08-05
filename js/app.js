@@ -50,12 +50,12 @@ $(document).ready(function() {
 					$('#result').empty();
 					ran = true;
 					res = OorE(destination);
-					for(var count = 0; count < 6 ; count++) {
-						if(count != 5) {
+					for(var count = 0; count < (members.length-1) ; count++) {
+						if(count != (members.length-2)) {
 							$('#result').append(members[count] + OorE(Math.floor((Math.random() * 100) + 1)) + '</p>');
 						} else {
-							var idk = Math.floor(Math.random() * (6 - 5 + 1)) + 5;
-							if(idk == 5) {
+							var idk = Math.floor(Math.random() * ((members.length-1) - (members.length-2) + 1)) + (members.length-2);
+							if(idk == (members.length-2)) {
 								$('#result').append(members[idk] + OorE(Math.floor((Math.random() * 100) + 1)) + '</p>');
 							} else {
 								$('#result').append(members[idk] + '</p>');
@@ -70,7 +70,7 @@ $(document).ready(function() {
 					if(typeof(numbers[destination])  != "undefined") {
 						$('#result').append('<p>'+ numbers[destination] + '</p>');
 					} else {
-						$('#result').append('<p><b>!</b> Warning <b>!</b> <b>'+ intruders[(Math.floor((Math.random() * intruders.length) + 1))] +'</b> found your results ....</p>');
+						$('#result').append('<p><b>!</b> Warning <b>!</b> <b>'+ intruders[(Math.floor((Math.random() * (intruders.length-1)) + 1))] +'</b> found your results ....</p>');
 						$('#result').append('<p><b>RUN!!</b>, run for your life .....</p>');
 					}
 				} else {
