@@ -20,7 +20,7 @@ $(document).ready(function() {
 	var members = ["<p>Hacking <b>NSA</b> Database.... ","<p>Hacking <b>CIA</b> Database.... ","<p>Hacking <b>NASA</b> Database.... ","<p>Asking <b>Elon Musk</b> .... ","<p>Asking <b>Keanu Reeves</b> .... ","<p>Bringing Back <b>Steve Jobs</b> from Death ....</p><p>Asking <b>Steve Jobs</b> .... ","<p>Bringing Back <b>Steve Jobs</b> from Death ....</p><p><b>Steve Jobs</b> is busy fixing Satan's <b>iphone 9s Max Pro Ultra Cook Edition</b> ....</p>"];
 	var numbers = {};
 	numbers['73'] = "The best number is 73. Why? 73 is the 21st prime number. Its mirror, 37, is the 12th and its mirror, 21, is the product of multiplying 7 and 3.";
-	var intruders = ["Trump", "kim jong un", "Putin", "Cardi B", "Logan paul", "Yo mama"];
+	numbers['1337'] = "LEET";
 	$('section').each( function(i,e) {
 		sectionArray.push($(e).attr('id'));
 	});	
@@ -69,9 +69,6 @@ $(document).ready(function() {
 					$('#result').siblings().removeClass('open');
 					if(typeof(numbers[destination])  != "undefined") {
 						$('#result').append('<p>'+ numbers[destination] + '</p>');
-					} else {
-						$('#result').append('<p><b>!</b> Warning <b>!</b> <b>'+ intruders[(Math.floor((Math.random() * (intruders.length-1)) + 1))] +'</b> found your results ....</p>');
-						$('#result').append('<p><b>RUN!!</b>, run for your life .....</p>');
 					}
 				} else {
 					$('#error').addClass('open');
